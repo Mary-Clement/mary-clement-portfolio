@@ -11,7 +11,7 @@ export const personalInfo = {
   // Social Media
   linkedin: "https://www.linkedin.com/in/mary-clement-88b475212/", // UPDATE THIS
   twitter: "http://x.com/Maya_Uko", // UPDATE THIS (or null if you don't have)
-  instagram: "https://instagram.com/your-handle", // UPDATE THIS (or null if you don't have)
+  instagram: "https://www.instagram.com/designsbymary2025?igsh=MW0xa3J5bG02dHZ4Yw%3D%3D&utm_source=qr", // UPDATE THIS (or null if you don't have)
   github: "https://github.com/Mary-Clement", // UPDATE THIS (or null if you don't have)
   
   // Links
@@ -22,7 +22,7 @@ export const personalInfo = {
   
   // Availability
   availableForWork: true,
-  availableFrom: "January 2026"
+  availableFrom: "March 2026"
 }
 
 // Utility to generate WhatsApp link

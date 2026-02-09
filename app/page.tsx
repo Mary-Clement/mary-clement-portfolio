@@ -60,7 +60,7 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-full bg-[#CE2029]/20 blur-xl animate-pulse"></div>
                 <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden shadow-[0_0_0_4px_rgba(206,32,41,0.2),0_8px_32px_rgba(0,0,0,0.3)]">
         <Image
-                    src="/images/profile-pic.jpg.JPG"
+                    src="/images/profile-pic.jpg"
                     alt="Mary Clement - Full-Stack Web Developer and UI/UX Designer based in Lagos, Nigeria"
                     width={450}
                     height={450}
@@ -101,7 +101,7 @@ export default function Home() {
                 transition={{ delay: 0.4, duration: 0.8 }}
                 className="text-base sm:text-lg text-[#CCCCCC] mb-6 md:mb-8 leading-relaxed max-w-xl"
               >
-                I design in Figma and build in code. From SaaS platforms to e-commerce stores, enterprise systems to fintech apps - I handle the complete process. Based in Lagos, working globally.
+                I design in Figma and build in code. From SaaS platforms to e-commerce stores, enterprise systems, and fintech apps - I handle the complete process. Based in Lagos, working globally.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -397,7 +397,7 @@ export default function Home() {
               {
                 number: '03',
                 title: 'Enterprise Software & SaaS Products',
-                description: 'Custom software for any business need - SaaS platforms, ERP systems, B2B applications, fintech products, CRM systems, and enterprise management. I build products that scale.',
+                description: 'Custom business software - SaaS platforms, CRM systems, and enterprise applications tailored to your specific needs.',
               },
               {
                 number: '04',
@@ -499,7 +499,7 @@ export default function Home() {
               </motion.div>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
                 {[
-                  { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', subtext: 'ES6+' },
+                  { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E', subtext: 'Language' },
                   { name: 'TypeScript', icon: SiTypescript, color: '#3178C6', subtext: 'Type-safe' },
                   { name: 'HTML5', icon: SiHtml5, color: '#E34F26', subtext: 'Markup' },
                   { name: 'CSS3', icon: SiCss3, color: '#1572B6', subtext: 'Styling' },
@@ -798,7 +798,7 @@ export default function Home() {
               {
                 title: 'VenueFlow',
                 category: 'SaaS Product',
-                description: 'Restaurant ordering platform built in public. Full design to development process.',
+                description: 'QR-code restaurant ordering platform with real-time kitchen updates. Building in public.',
                 tech: 'Figma • React • Node.js • PostgreSQL',
                 image: '/images/venueflow.jpg',
                 key: 'venueflow',
@@ -863,8 +863,8 @@ export default function Home() {
                     {links?.figma && (
                       <a
                         href={links.figma}
-                        target="_blank"
-                        rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
                         className="inline-flex items-center justify-center border border-[rgba(206,32,41,0.3)] text-[#CE2029] px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[rgba(206,32,41,0.1)] hover:border-[#CE2029] transition-all min-h-[44px] leading-none"
                       >
                         Design Project
@@ -941,7 +941,7 @@ export default function Home() {
           </a>
             </div>
 
-            <p className="text-xs sm:text-sm text-[var(--text-secondary)] px-4">Currently available for new projects starting {personalInfo.availableFrom}</p>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] px-4">Currently booking projects for {personalInfo.availableFrom}</p>
           </motion.div>
         </div>
       </section>

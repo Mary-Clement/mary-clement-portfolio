@@ -8,7 +8,7 @@ export default function StructuredData() {
     "jobTitle": personalInfo.title,
     "description": "Full-stack web developer specializing in WordPress, React, e-commerce, and SaaS platforms",
     "url": "https://mary-clement.vercel.app",
-    "image": "https://mary-clement.vercel.app/images/profile-pic.jpg.JPG",
+    "image": "https://mary-clement.vercel.app/images/profile-pic.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Lagos",

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: "Full-stack developer building production-ready systems in weeks. 7+ projects live, serving 2,500+ users globally.",
     images: [
       {
-        url: "/images/profile-pic.jpg.JPG",
+        url: "/images/profile-pic.jpg",
         width: 1200,
         height: 630,
         alt: "Mary Clement - Web Developer",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mary Clement - Web Developer Lagos",
     description: "Full-stack developer building WordPress, React & e-commerce solutions",
-    images: ["/images/profile-pic.jpg.JPG"],
+    images: ["/images/profile-pic.jpg"],
     creator: "@Maya_Uko",
   },
   robots: {

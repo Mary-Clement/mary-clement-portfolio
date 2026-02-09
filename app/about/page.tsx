@@ -52,7 +52,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 rounded-full bg-[#CE2029]/20 blur-xl animate-pulse"></div>
                 <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden shadow-[0_0_0_4px_rgba(206,32,41,0.2),0_8px_32px_rgba(0,0,0,0.3)]">
                   <Image
-                    src="/images/profile-pic.jpg.JPG"
+                    src="/images/profile-pic.jpg"
                     alt="Mary Clement - Web developer in Lagos sharing her story and approach to building production-ready systems"
                     width={400}
                     height={400}

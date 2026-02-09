@@ -139,7 +139,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-[var(--border-color)] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-[var(--text-secondary)] text-xs sm:text-sm text-center sm:text-left">© 2026 {personalInfo.name} • Built with Next.js, deployed on Vercel</p>
+          <p className="text-[var(--text-secondary)] text-xs sm:text-sm text-center sm:text-left">© 2026 {personalInfo.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
