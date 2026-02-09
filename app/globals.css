@@ -1,26 +1,219 @@
 @import "tailwindcss";
 
+/* Dark mode only - no theme switching */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #1A1A1A;
+  --bg-card: #1F1F1F;
+  --text-primary: #FFFFFF;
+  --text-secondary: #888888;
+  --text-body: #CCCCCC;
+  --border-color: #2A2A2A;
+  --accent: #CE2029;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CE2029;
+}
+
+/* Glow effect for buttons */
+.glow-on-hover:hover {
+  box-shadow: 0 0 20px rgba(206, 32, 41, 0.5);
+}
+
+/* Paystack-style centered animated gradient */
+.paystack-gradient {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  opacity: 0.12;
+  filter: blur(150px);
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle, 
+    rgba(0, 255, 127, 0.8) 0%, 
+    rgba(59, 130, 246, 0.6) 30%, 
+    rgba(236, 72, 153, 0.4) 60%, 
+    rgba(139, 92, 246, 0.3) 80%,
+    transparent 100%
+  );
+  animation: rotateMorph 20s ease-in-out infinite;
+}
+
+@keyframes rotateMorph {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    opacity: 0.12;
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) scale(1.1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(0.95);
+    opacity: 0.10;
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) scale(1.05);
+    opacity: 0.13;
+  }
+}
+
+/* Floating color orbs */
+.floating-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 30s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(0, 206, 209, 0.15) 0%, transparent 70%);
+  animation-delay: 0s;
+  animation-duration: 35s;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  top: 20%;
+  right: -100px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+  animation-delay: 5s;
+  animation-duration: 40s;
+}
+
+.orb-3 {
+  width: 450px;
+  height: 450px;
+  bottom: -100px;
+  left: 20%;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.12) 0%, transparent 70%);
+  animation-delay: 10s;
+  animation-duration: 30s;
+}
+
+.orb-4 {
+  width: 350px;
+  height: 350px;
+  top: 60%;
+  right: 30%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.10) 0%, transparent 70%);
+  animation-delay: 15s;
+  animation-duration: 38s;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translate(0, 0);
+  }
+  25% { 
+    transform: translate(30px, -50px);
+  }
+  50% { 
+    transform: translate(-40px, 30px);
+  }
+  75% { 
+    transform: translate(50px, 40px);
+  }
+}
+
+/* Cursor follow glow (desktop only) */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(206, 32, 41, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: transform 0.2s ease;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .cursor-glow {
+    opacity: 1;
+  }
+}
+
+/* Red accent line animation */
+@keyframes drawLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+.green-accent-line {
+  animation: drawLine 0.5s ease-out forwards;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .paystack-gradient,
+  .floating-orb {
+    animation: none !important;
+  }
 }
