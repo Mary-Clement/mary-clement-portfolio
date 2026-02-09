@@ -12,7 +12,8 @@ export default function StructuredData() {
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Lagos",
-      "addressCountry": "Nigeria"
+      "addressRegion": "Lagos State",
+      "addressCountry": "NG"
     },
     "sameAs": [
       personalInfo.linkedin,
@@ -34,6 +35,12 @@ export default function StructuredData() {
     "@type": "ProfessionalService",
     "name": `${personalInfo.name} Web Development Services`,
     "description": "Custom web development services including WordPress sites, React applications, e-commerce platforms, and SaaS solutions",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lagos",
+      "addressRegion": "Lagos State",
+      "addressCountry": "NG"
+    },
     "provider": {
       "@type": "Person",
       "name": personalInfo.name
