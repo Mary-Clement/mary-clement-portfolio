@@ -74,70 +74,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Structured Data - Person Schema
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": personalInfo.name,
-    "jobTitle": personalInfo.title,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lagos",
-      "addressCountry": "NG"
-    },
-    "email": personalInfo.email,
-    "url": "https://your-domain.vercel.app", // UPDATE THIS
-    "sameAs": [
-      personalInfo.linkedin,
-      personalInfo.twitter,
-      personalInfo.github,
-    ].filter(Boolean),
-    "knowsAbout": [
-      "Web Development",
-      "UI/UX Design",
-      "Full-Stack Development",
-      "WordPress Development",
-      "E-commerce Development",
-      "Business Automation"
-    ]
-  };
-
-  // Structured Data - Professional Service Schema
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": `${personalInfo.name} - ${personalInfo.title}`,
-    "description": "Full-stack web development and UI/UX design services. Custom websites, e-commerce platforms, and business automation systems.",
-    "provider": {
-      "@type": "Person",
-      "name": personalInfo.name
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Nigeria"
-    },
-    "serviceType": [
-      "Web Development",
-      "UI/UX Design",
-      "E-commerce Development",
-      "Business Automation",
-      "WordPress Development"
-    ]
-  };
+  // Note: Person and ProfessionalService schemas are handled in StructuredData component on homepage
+  // This prevents duplicate schemas across all pages
 
   return (
     <html lang="en">
       <head>
         <meta name="theme-color" content="#0A0A0A" />
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-        />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {/* Paystack-style Animated Background Gradients */}
