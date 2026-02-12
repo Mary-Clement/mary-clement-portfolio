@@ -23,3 +23,4 @@ The following placeholder images have been created as SVG files. For production 
 
 The SVG placeholders are temporary and will display, but JPG format is recommended for better performance and compatibility.
 
+
